@@ -15,7 +15,6 @@ pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 # Secret key for signing JWT tokens - in production this comes from .env
 SECRET_KEY = os.getenv("SECRET_KEY", "changethislater")
 ALGORITHM = "HS256"
-
 def hash_password(password: str) -> str:
     return pwd_context.hash(password)
 
